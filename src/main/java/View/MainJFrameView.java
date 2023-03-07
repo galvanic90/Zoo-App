@@ -31,23 +31,23 @@ public class MainJFrameView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        buttonCreateAnimal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jButton2 = new javax.swing.JButton();
+        buttonGetAnimal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Crear Animal");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonCreateAnimal.setText("Crear Animal");
+        buttonCreateAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                buttonCreateAnimalActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Consultar Animales");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGetAnimal.setText("Consultar Animales");
+        buttonGetAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                buttonGetAnimalActionPerformed(evt);
             }
         });
 
@@ -60,9 +60,9 @@ public class MainJFrameView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(buttonCreateAnimal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
+                        .addComponent(buttonGetAnimal)
                         .addGap(0, 336, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -71,8 +71,8 @@ public class MainJFrameView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                    .addComponent(buttonCreateAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonGetAnimal))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
                 .addContainerGap())
@@ -81,17 +81,19 @@ public class MainJFrameView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void buttonCreateAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCreateAnimalActionPerformed
         jScrollPane1.setViewportView(new CreateAnimalPanel(logisticController));
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_buttonCreateAnimalActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void buttonGetAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGetAnimalActionPerformed
         System.out.println(logisticController.getAnimals());
-    }//GEN-LAST:event_jButton2ActionPerformed
+        jScrollPane1.setViewportView(new ListAnimalsPanel(logisticController.getAnimals()));
+
+    }//GEN-LAST:event_buttonGetAnimalActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton buttonCreateAnimal;
+    private javax.swing.JButton buttonGetAnimal;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
