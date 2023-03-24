@@ -4,7 +4,6 @@
  */
 package Model;
 
-import Model.Animals;
 
 /**
  *
@@ -12,6 +11,33 @@ import Model.Animals;
  */
 public class WildAnimal extends Animals {
     
-    //private
+    private String dangerousness;
+
+    public WildAnimal() {
+    }
+
+    public WildAnimal(String dangerousness, int code, String name, String scientificName, float weight, String gender, float age, String state, String pedigree, String psycology, String origin) {
+        super(code, name, scientificName, weight, gender, age, state, pedigree, psycology, origin);
+        this.dangerousness = dangerousness;
+    }
+
+    public String getDangerousness() {
+        return dangerousness;
+    }
+
+    public void setDangerousness(String dangerousness) {
+        this.dangerousness = dangerousness;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("WildAnimal{");
+        sb.append("dangerousness=").append(dangerousness);
+        sb.append('}');
+        return sb.toString();
+    }
+    
+    
     
 }

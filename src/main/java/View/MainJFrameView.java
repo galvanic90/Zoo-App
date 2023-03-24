@@ -34,10 +34,15 @@ public class MainJFrameView extends javax.swing.JFrame {
         buttonCreateAnimal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         buttonGetAnimal = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItemCreateWA = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        buttonCreateAnimal.setText("Crear Animal");
+        buttonCreateAnimal.setText("Crear Animal Salvaje");
         buttonCreateAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCreateAnimalActionPerformed(evt);
@@ -51,6 +56,26 @@ public class MainJFrameView extends javax.swing.JFrame {
             }
         });
 
+        jMenu1.setText("Gestión de Animales");
+
+        jMenuItemCreateWA.setText("Crear Animal Salvaje");
+        jMenuItemCreateWA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCreateWAActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemCreateWA);
+
+        jMenuItem2.setText("Consultar Animales Salvajes");
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -63,7 +88,7 @@ public class MainJFrameView extends javax.swing.JFrame {
                         .addComponent(buttonCreateAnimal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(buttonGetAnimal)
-                        .addGap(0, 336, Short.MAX_VALUE)))
+                        .addGap(0, 285, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -74,16 +99,12 @@ public class MainJFrameView extends javax.swing.JFrame {
                     .addComponent(buttonCreateAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonGetAnimal))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void buttonCreateAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCreateAnimalActionPerformed
-        jScrollPane1.setViewportView(new CreateAnimalPanel(logisticController));
-    }//GEN-LAST:event_buttonCreateAnimalActionPerformed
 
     private void buttonGetAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGetAnimalActionPerformed
         System.out.println(logisticController.getAnimals());
@@ -91,9 +112,23 @@ public class MainJFrameView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_buttonGetAnimalActionPerformed
 
+    private void buttonCreateAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCreateAnimalActionPerformed
+        jScrollPane1.setViewportView(new CreateWildAnimalPanel(logisticController));
+    }//GEN-LAST:event_buttonCreateAnimalActionPerformed
+
+    private void jMenuItemCreateWAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCreateWAActionPerformed
+        jScrollPane1.setViewportView(new CreateWildAnimalPanel(logisticController));
+
+    }//GEN-LAST:event_jMenuItemCreateWAActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCreateAnimal;
     private javax.swing.JButton buttonGetAnimal;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItemCreateWA;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
