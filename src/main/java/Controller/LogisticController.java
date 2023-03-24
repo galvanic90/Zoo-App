@@ -18,6 +18,7 @@ import java.util.logging.Logger;
  * @author xaraxx
  */
 public class LogisticController {
+    Gson gson = new Gson();
     List<Animals> animals;
 
     public LogisticController(List<Animals> animals) {
@@ -25,14 +26,11 @@ public class LogisticController {
     }
     
     public void createAnimal (Animals animal){
-        animals.add(animal);
-    }
-    
-    public void createWildAnimal (WildAnimal animal){
-        animals.add(animal);
-        try {
-            new Gson().toJson(animal, new FileWriter("salvajes.json"));
-            System.out.println("Animal ");
+        animals.add(animal);    
+        try (FileWriter writer = new FileWriter("animals.json")) {
+           
+            gson.toJson(animals, writer);
+            //System.out.println("Animal ");
         } catch (IOException ex) {
             Logger.getLogger(LogisticController.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -5,7 +5,6 @@
 package View;
 
 import Controller.LogisticController;
-import Model.Animals;
 import Model.WildAnimal;
 import javax.swing.JOptionPane;
 
@@ -228,7 +227,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
         wildAnimal.setOrigin(jTextFieldOrigin.getText());
         wildAnimal.setDangerousness(jComboBoxDangerousness.getSelectedItem().toString());
         wildAnimal.setGender(getGender());
-        logistic.createWildAnimal(wildAnimal);
+        logistic.createAnimal(wildAnimal);
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private String getGender() {

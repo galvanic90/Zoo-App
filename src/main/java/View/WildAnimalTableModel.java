@@ -4,7 +4,7 @@
  */
 package View;
 
-import Model.Animals;
+import Model.WildAnimal;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
@@ -12,13 +12,13 @@ import javax.swing.table.AbstractTableModel;
  *
  * @author xaraxx
  */
-public class AnimalTableModel extends AbstractTableModel {
+public class WildAnimalTableModel extends AbstractTableModel {
 
-    private List<Animals> list;
-    private String[] columnNames = {"Name", "Age"};
+    private List<WildAnimal> list;
+    private String[] columnNames = {"Name", "Age", "Scientific Name", "Weight", "Gender", "Status", "Pedigree", "Psycology", "Origin"};
     
 
-    public AnimalTableModel(List<Animals> list){
+    public WildAnimalTableModel(List<WildAnimal> list){
          this.list = list;
     }
 
@@ -39,12 +39,26 @@ public class AnimalTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Animals si = list.get(rowIndex);
+        WildAnimal si = list.get(rowIndex);
         switch (columnIndex) {
             case 0: 
                 return si.getName();
             case 1:
                 return si.getAge();
+            case 2:
+                return si.getScientificName();
+            case 3: 
+                return si.getWeight();
+            case 4:
+                return si.getGender();
+            case 5:
+                return si.getState();
+            case 6:
+                return si.getPsycology();
+            case 7:
+                return si.getPedigree();
+            case 8:
+                return si.getOrigin();
             }
            return null;
    }
