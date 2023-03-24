@@ -21,7 +21,6 @@ public class PersistenceHelper {
     public void save(Object item, String fileName){ 
         try (FileWriter writer = new FileWriter(fileName)) {
             gson.toJson(item, writer);
-            //System.out.println("Animal ");
         } catch (IOException ex) {
             Logger.getLogger(PersistenceHelper.class.getName()).log(Level.SEVERE, null, ex);
         }
