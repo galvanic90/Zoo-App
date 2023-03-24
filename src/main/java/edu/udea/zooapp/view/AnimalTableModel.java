@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package View;
+package edu.udea.zooapp.view;
 
-import Model.Animals;
+import edu.udea.zooapp.model.Animals;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 

@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package View;
+package edu.udea.zooapp.view;
 
-import Model.WildAnimal;
+import edu.udea.zooapp.model.WildAnimal;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
@@ -70,6 +70,20 @@ public class WildAnimalTableModel extends AbstractTableModel {
                return String.class;
              case 1:
                return Float.class;
+             case 2:
+                return String.class;
+            case 3: 
+                return Float.class;
+            case 4:
+                return String.class;
+            case 5:
+                return String.class;
+            case 6:
+                return String.class;
+            case 7:
+                return String.class;
+            case 8:
+                return String.class;
              }
              return null;
       }

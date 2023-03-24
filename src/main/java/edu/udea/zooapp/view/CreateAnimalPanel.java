@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package View;
+package edu.udea.zooapp.view;
 
-import Controller.LogisticController;
-import Model.Animals;
+import edu.udea.zooapp.controller.LogisticController;
+import edu.udea.zooapp.model.Animals;
 
 /**
  *

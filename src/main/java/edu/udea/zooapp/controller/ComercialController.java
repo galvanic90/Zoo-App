@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.xaraxx.zooapp.Sales;
+package edu.udea.zooapp.controller;
 
 /**
  *
  * @author xaraxx
  */
-public class SalesAdmin {
+public class ComercialController {
     
 }

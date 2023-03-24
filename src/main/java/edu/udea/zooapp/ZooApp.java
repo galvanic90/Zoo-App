@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.xaraxx.zooapp;
+package edu.udea.zooapp;
 
-import Controller.LogisticController;
-import Model.Animals;
-import View.MainJFrameView;
+import edu.udea.zooapp.controller.LogisticController;
+import edu.udea.zooapp.model.Animals;
+import edu.udea.zooapp.view.MainJFrameView;
 import java.util.ArrayList;
 import java.util.List;
 
