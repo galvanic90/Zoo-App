@@ -58,3 +58,5 @@ nbdist/
 
 # End of https://www.toptal.com/developers/gitignore/api/netbeans,java,maven
 
+.idea
+.vscode
