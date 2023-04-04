@@ -15,7 +15,7 @@ import javax.swing.table.AbstractTableModel;
 public class WildAnimalTableModel extends AbstractTableModel {
 
     private List<WildAnimal> list;
-    private String[] columnNames = {"Name", "Age", "Scientific Name", "Weight", "Gender", "Status", "Pedigree", "Psycology", "Origin"};
+    private String[] columnNames = {"Name", "Age", "Scientific Name", "Weight", "Gender", "Status", "Pedigree", "Psycology", "Origin", "Protected Specie"};
     
 
     public WildAnimalTableModel(List<WildAnimal> list){
@@ -59,6 +59,8 @@ public class WildAnimalTableModel extends AbstractTableModel {
                 return si.getPedigree();
             case 8:
                 return si.getOrigin();
+            case 9:
+                return si.getProtectedSpecie();
             }
            return null;
    }
@@ -84,7 +86,9 @@ public class WildAnimalTableModel extends AbstractTableModel {
                 return String.class;
             case 8:
                 return String.class;
-             }
+            case 9:
+                return Boolean.class;
+            }
              return null;
       }
  }

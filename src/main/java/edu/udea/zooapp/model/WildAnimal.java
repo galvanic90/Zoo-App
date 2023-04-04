@@ -12,6 +12,7 @@ package edu.udea.zooapp.model;
 public class WildAnimal extends Animals {
     
     private String dangerousness;
+    private Boolean protectedSpecie;
 
     public WildAnimal() {
     }
@@ -19,6 +20,7 @@ public class WildAnimal extends Animals {
     public WildAnimal(String dangerousness, int code, String name, String scientificName, float weight, String gender, float age, String state, String pedigree, String psycology, String origin) {
         super(code, name, scientificName, weight, gender, age, state, pedigree, psycology, origin);
         this.dangerousness = dangerousness;
+        this.protectedSpecie = protectedSpecie;
     }
 
     public String getDangerousness() {
@@ -28,16 +30,23 @@ public class WildAnimal extends Animals {
     public void setDangerousness(String dangerousness) {
         this.dangerousness = dangerousness;
     }
+    
+    public Boolean getProtectedSpecie() {
+        return protectedSpecie;
+    }
+    
+    public void setProtectedSpecie(Boolean protectedSpecie) {
+        this.protectedSpecie = protectedSpecie;
+    }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("WildAnimal{");
         sb.append("dangerousness=").append(dangerousness);
+        sb.append("protectedSpecie=").append(protectedSpecie);
         sb.append('}');
         return sb.toString();
     }
-    
-    
     
 }
