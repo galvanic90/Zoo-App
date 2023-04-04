@@ -188,6 +188,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="inputCientifName">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputCientifNameActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="stateJLabel">
       <Properties>

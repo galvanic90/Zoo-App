@@ -76,6 +76,12 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
 
         jLabelScientName.setText("Nombre Científico. ");
 
+        inputCientifName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputCientifNameActionPerformed(evt);
+            }
+        });
+
         stateJLabel.setText("Estado ");
 
         lableGender.setText("Género");
@@ -220,6 +226,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         WildAnimal wildAnimal = new WildAnimal();
         wildAnimal.setName(inputName.getText());
+        wildAnimal.setScientificName(inputCientifName.getText());
         wildAnimal.setAge(Float.parseFloat(jSpinnerAge.getValue().toString()));
         wildAnimal.setState(stateJComboBox.getSelectedItem().toString());
         wildAnimal.setPedigree(jTextPanePedigree.getText());
@@ -229,6 +236,10 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
         wildAnimal.setGender(getGender());
         logistic.createWildAnimal(wildAnimal);
     }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void inputCientifNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputCientifNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputCientifNameActionPerformed
 
     private String getGender() {
         if(maleOpt.isSelected()) {
