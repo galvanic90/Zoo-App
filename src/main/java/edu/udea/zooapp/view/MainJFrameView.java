@@ -161,8 +161,8 @@ public class MainJFrameView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonGetAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGetAnimalActionPerformed
-        System.out.println(logisticController.getAnimals());
-        jScrollPane1.setViewportView(new ListAnimalsPanel(logisticController.getAnimals()));
+        System.out.println(logisticController.getWildAnimals());
+        jScrollPane1.setViewportView(new ListAnimalsPanel(logisticController.getWildAnimals()));
 
     }//GEN-LAST:event_buttonGetAnimalActionPerformed
 

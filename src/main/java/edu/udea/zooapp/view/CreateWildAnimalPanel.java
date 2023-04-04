@@ -227,7 +227,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
         wildAnimal.setOrigin(jTextFieldOrigin.getText());
         wildAnimal.setDangerousness(jComboBoxDangerousness.getSelectedItem().toString());
         wildAnimal.setGender(getGender());
-        logistic.createAnimal(wildAnimal);
+        logistic.createWildAnimal(wildAnimal);
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private String getGender() {

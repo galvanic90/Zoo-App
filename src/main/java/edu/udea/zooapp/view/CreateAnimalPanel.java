@@ -6,6 +6,7 @@ package edu.udea.zooapp.view;
 
 import edu.udea.zooapp.controller.LogisticController;
 import edu.udea.zooapp.model.Animals;
+import edu.udea.zooapp.model.WildAnimal;
 
 /**
  *
@@ -179,10 +180,10 @@ public class CreateAnimalPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
-        Animals animal = new Animals();
-        animal.setName(inputName.getText());
-        animal.setAge(Float.parseFloat(jSpinnerAge.getValue().toString()));
-        logistic.createAnimal(animal);
+        WildAnimal wildAnimal = new WildAnimal();
+        wildAnimal.setName(inputName.getText());
+        wildAnimal.setAge(Float.parseFloat(jSpinnerAge.getValue().toString()));
+        logistic.createWildAnimal(wildAnimal);
     }//GEN-LAST:event_btnCreateActionPerformed
 
 

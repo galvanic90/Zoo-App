@@ -4,8 +4,8 @@
  */
 package edu.udea.zooapp.controller;
 
-import edu.udea.zooapp.model.Animals;
 import edu.udea.zooapp.helper.PersistenceHelper;
+import edu.udea.zooapp.model.WildAnimal;
 import java.util.List;
 
 /**
@@ -15,20 +15,20 @@ import java.util.List;
 public class LogisticController {
     PersistenceHelper peristence = new PersistenceHelper();
     
-    List<Animals> animals;
+    List<WildAnimal> wildAnimals;
 
-    public LogisticController(List<Animals> animals) {
-        this.animals = animals;
+    public LogisticController(List<WildAnimal> wildAnimals) {
+        this.wildAnimals = wildAnimals;
     }
     
-    public void createAnimal (Animals animal){
-        animals.add(animal);  
-        peristence.save(animals, "animals.json");
+    public void createWildAnimal (WildAnimal wildAnimal){
+        wildAnimals.add(wildAnimal);  
+        peristence.save(wildAnimal, "wild-animals.json");
             
     }
     
-    public List<Animals> getAnimals() {
-        return animals;
+    public List<WildAnimal> getWildAnimals() {
+        return wildAnimals;
     }
     
 }

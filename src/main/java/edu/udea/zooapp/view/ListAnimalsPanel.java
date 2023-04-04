@@ -4,7 +4,7 @@
  */
 package edu.udea.zooapp.view;
 
-import edu.udea.zooapp.model.Animals;
+import edu.udea.zooapp.model.WildAnimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Vector;
@@ -20,9 +20,9 @@ public class ListAnimalsPanel extends javax.swing.JPanel {
     /**
      * Creates new form ListAnimalsPanel
      */
-    public ListAnimalsPanel(List<Animals> animals) {
+    public ListAnimalsPanel(List<WildAnimal> wildAnimals) {
         
-        tableModel = new AnimalTableModel(animals);
+        tableModel = new WildAnimalTableModel(wildAnimals);
         
         initComponents();
 
