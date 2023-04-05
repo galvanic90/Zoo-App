@@ -26,19 +26,190 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        stateDAJLabel = new javax.swing.JLabel();
+        jTextFieldOriginDA = new javax.swing.JTextField();
+        lableGenderDA = new javax.swing.JLabel();
+        jLabelOrginDA = new javax.swing.JLabel();
+        labelWeightDA = new javax.swing.JLabel();
+        inputWeightDA = new javax.swing.JTextField();
+        jSpinnerAgeDA = new javax.swing.JSpinner();
+        jLabelPsycologyDA = new javax.swing.JLabel();
+        labelNameDA = new javax.swing.JLabel();
+        maleOptDA = new javax.swing.JRadioButton();
+        jTextFieldPsycologyDA = new javax.swing.JTextField();
+        inputNameDA = new javax.swing.JTextField();
+        femaleOptDA = new javax.swing.JRadioButton();
+        labelAgeDA = new javax.swing.JLabel();
+        stateDAJComboBox = new javax.swing.JComboBox<>();
+        jScrollPanePedigreeDA = new javax.swing.JScrollPane();
+        jTextPanePedigree = new javax.swing.JTextPane();
+        jLabelScientNameDA = new javax.swing.JLabel();
+        inputScientifNameDA = new javax.swing.JTextField();
+        pedigreeDAJLabel = new javax.swing.JLabel();
+
+        stateDAJLabel.setText("Estado ");
+
+        lableGenderDA.setText("Género");
+
+        jLabelOrginDA.setText("Orígen");
+
+        labelWeightDA.setText("Peso");
+
+        jLabelPsycologyDA.setText("Sicología");
+
+        labelNameDA.setText("Nombre");
+
+        maleOptDA.setText("Macho");
+
+        femaleOptDA.setText("Hembra");
+
+        labelAgeDA.setText("Edad");
+
+        stateDAJComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Embarazo", "Enfermedad", "Discapacidad", "Saludable", "Óptimo", " " }));
+        stateDAJComboBox.setPreferredSize(new java.awt.Dimension(64, 24));
+
+        jTextPanePedigree.setPreferredSize(new java.awt.Dimension(64, 24));
+        jScrollPanePedigreeDA.setViewportView(jTextPanePedigree);
+
+        jLabelScientNameDA.setText("Nombre Científico. ");
+
+        inputScientifNameDA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputScientifNameDAActionPerformed(evt);
+            }
+        });
+
+        pedigreeDAJLabel.setText("Pedigree");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelPsycologyDA)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
+                .addComponent(jTextFieldPsycologyDA, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabelOrginDA)
+                            .addGap(190, 190, 190)
+                            .addComponent(jTextFieldOriginDA))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(pedigreeDAJLabel)
+                            .addGap(176, 176, 176)
+                            .addComponent(jScrollPanePedigreeDA))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(labelAgeDA)
+                                .addComponent(labelNameDA)
+                                .addComponent(jLabelScientNameDA))
+                            .addGap(110, 110, 110)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(inputScientifNameDA)
+                                .addComponent(inputNameDA)
+                                .addComponent(jSpinnerAgeDA)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lableGenderDA)
+                                .addComponent(labelWeightDA))
+                            .addGap(186, 186, 186)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(inputWeightDA)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(maleOptDA)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 221, Short.MAX_VALUE)
+                                    .addComponent(femaleOptDA))))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(stateDAJLabel)
+                            .addGap(184, 184, 184)
+                            .addComponent(stateDAJComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(300, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelPsycologyDA)
+                    .addComponent(jTextFieldPsycologyDA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(46, 46, 46)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(labelNameDA))
+                        .addComponent(inputNameDA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(6, 6, 6)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(labelAgeDA))
+                        .addComponent(jSpinnerAgeDA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(6, 6, 6)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelScientNameDA)
+                        .addComponent(inputScientifNameDA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(12, 12, 12)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(labelWeightDA)
+                        .addComponent(inputWeightDA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(6, 6, 6)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(2, 2, 2)
+                            .addComponent(lableGenderDA))
+                        .addComponent(maleOptDA)
+                        .addComponent(femaleOptDA))
+                    .addGap(10, 10, 10)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(stateDAJLabel))
+                        .addComponent(stateDAJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(6, 6, 6)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(pedigreeDAJLabel)
+                        .addComponent(jScrollPanePedigreeDA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(6, 6, 6)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelOrginDA)
+                        .addComponent(jTextFieldOriginDA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(112, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void inputScientifNameDAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputScientifNameDAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputScientifNameDAActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton femaleOptDA;
+    private javax.swing.JTextField inputNameDA;
+    private javax.swing.JTextField inputScientifNameDA;
+    private javax.swing.JTextField inputWeightDA;
+    private javax.swing.JLabel jLabelOrginDA;
+    private javax.swing.JLabel jLabelPsycologyDA;
+    private javax.swing.JLabel jLabelScientNameDA;
+    private javax.swing.JScrollPane jScrollPanePedigreeDA;
+    private javax.swing.JSpinner jSpinnerAgeDA;
+    private javax.swing.JTextField jTextFieldOriginDA;
+    private javax.swing.JTextField jTextFieldPsycologyDA;
+    private javax.swing.JTextPane jTextPanePedigree;
+    private javax.swing.JLabel labelAgeDA;
+    private javax.swing.JLabel labelNameDA;
+    private javax.swing.JLabel labelWeightDA;
+    private javax.swing.JLabel lableGenderDA;
+    private javax.swing.JRadioButton maleOptDA;
+    private javax.swing.JLabel pedigreeDAJLabel;
+    private javax.swing.JComboBox<String> stateDAJComboBox;
+    private javax.swing.JLabel stateDAJLabel;
     // End of variables declaration//GEN-END:variables
 }

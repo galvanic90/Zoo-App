@@ -151,7 +151,7 @@ public class MainJFrameView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(388, 388, 388)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 151, Short.MAX_VALUE)))
+                        .addGap(0, 302, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -160,7 +160,7 @@ public class MainJFrameView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -189,7 +189,7 @@ public class MainJFrameView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItemCreateDAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCreateDAActionPerformed
-        // TODO add your handling code here:
+        jScrollPane1.setViewportView(new CreateDomesticAnimal());
     }//GEN-LAST:event_jMenuItemCreateDAActionPerformed
 
     private void jMenuItemReadWAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReadWAActionPerformed

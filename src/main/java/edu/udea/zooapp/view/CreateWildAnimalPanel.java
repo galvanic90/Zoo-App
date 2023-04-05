@@ -44,11 +44,11 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
         lableAge = new javax.swing.JLabel();
         btnCreate = new javax.swing.JButton();
         jLabelScientName = new javax.swing.JLabel();
-        inputCientifName = new javax.swing.JTextField();
+        inputScientifName = new javax.swing.JTextField();
         stateJLabel = new javax.swing.JLabel();
         lableGender = new javax.swing.JLabel();
         labelWeight = new javax.swing.JLabel();
-        inputName1 = new javax.swing.JTextField();
+        inputWeight = new javax.swing.JTextField();
         jSpinnerAge = new javax.swing.JSpinner();
         maleOpt = new javax.swing.JRadioButton();
         femaleOpt = new javax.swing.JRadioButton();
@@ -57,7 +57,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
         jTextPanePedigree = new javax.swing.JTextPane();
         pedigreeJLabel = new javax.swing.JLabel();
         jTextFieldOrigin = new javax.swing.JTextField();
-        jLabelOrgini = new javax.swing.JLabel();
+        jLabelOrgin = new javax.swing.JLabel();
         jComboBoxDangerousness = new javax.swing.JComboBox<>();
         jLabelDangerousness = new javax.swing.JLabel();
         jLabelPsycology = new javax.swing.JLabel();
@@ -78,9 +78,9 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
 
         jLabelScientName.setText("Nombre Científico. ");
 
-        inputCientifName.addActionListener(new java.awt.event.ActionListener() {
+        inputScientifName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputCientifNameActionPerformed(evt);
+                inputScientifNameActionPerformed(evt);
             }
         });
 
@@ -104,7 +104,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
 
         pedigreeJLabel.setText("Pedigree");
 
-        jLabelOrgini.setText("Orígen");
+        jLabelOrgin.setText("Orígen");
 
         jComboBoxDangerousness.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Extremo", "Alto", "Medio", "Bajo" }));
         jComboBoxDangerousness.setPreferredSize(new java.awt.Dimension(64, 24));
@@ -138,7 +138,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
                                 .addGap(99, 99, 99)
                                 .addComponent(jComboBoxDangerousness, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelOrgini)
+                                .addComponent(jLabelOrgin)
                                 .addGap(190, 190, 190)
                                 .addComponent(jTextFieldOrigin))
                             .addGroup(layout.createSequentialGroup()
@@ -152,7 +152,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
                                     .addComponent(jLabelScientName))
                                 .addGap(110, 110, 110)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(inputCientifName)
+                                    .addComponent(inputScientifName)
                                     .addComponent(inputName)
                                     .addComponent(jSpinnerAge)))
                             .addGroup(layout.createSequentialGroup()
@@ -161,10 +161,10 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
                                     .addComponent(labelWeight))
                                 .addGap(186, 186, 186)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(inputName1)
+                                    .addComponent(inputWeight)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(maleOpt)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
                                         .addComponent(femaleOpt))))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(stateJLabel)
@@ -200,11 +200,11 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelScientName)
-                    .addComponent(inputCientifName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputScientifName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelWeight)
-                    .addComponent(inputName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -224,7 +224,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelOrgini)
+                    .addComponent(jLabelOrgin)
                     .addComponent(jTextFieldOrigin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,7 +238,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(protectedSpJCheckBox)
                     .addComponent(protectedSpJLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(btnCreate)
                 .addContainerGap())
         );
@@ -247,7 +247,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         WildAnimal wildAnimal = new WildAnimal();
         wildAnimal.setName(inputName.getText());
-        wildAnimal.setScientificName(inputCientifName.getText());
+        wildAnimal.setScientificName(inputScientifName.getText());
         wildAnimal.setAge(Float.parseFloat(jSpinnerAge.getValue().toString()));
         wildAnimal.setState(stateJComboBox.getSelectedItem().toString());
         wildAnimal.setPedigree(jTextPanePedigree.getText());
@@ -259,9 +259,9 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
         logistic.createWildAnimal(wildAnimal);
     }//GEN-LAST:event_btnCreateActionPerformed
 
-    private void inputCientifNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputCientifNameActionPerformed
+    private void inputScientifNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputScientifNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputCientifNameActionPerformed
+    }//GEN-LAST:event_inputScientifNameActionPerformed
 
     private void protectedSpJCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_protectedSpJCheckBoxActionPerformed
         // TODO add your handling code here:
@@ -282,12 +282,12 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCreate;
     private javax.swing.JRadioButton femaleOpt;
     private javax.swing.ButtonGroup genderButtonGroup;
-    private javax.swing.JTextField inputCientifName;
     private javax.swing.JTextField inputName;
-    private javax.swing.JTextField inputName1;
+    private javax.swing.JTextField inputScientifName;
+    private javax.swing.JTextField inputWeight;
     private javax.swing.JComboBox<String> jComboBoxDangerousness;
     private javax.swing.JLabel jLabelDangerousness;
-    private javax.swing.JLabel jLabelOrgini;
+    private javax.swing.JLabel jLabelOrgin;
     private javax.swing.JLabel jLabelPsycology;
     private javax.swing.JLabel jLabelScientName;
     private javax.swing.JScrollPane jScrollPane1;

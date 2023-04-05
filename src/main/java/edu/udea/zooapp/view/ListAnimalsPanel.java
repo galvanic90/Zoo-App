@@ -5,9 +5,7 @@
 package edu.udea.zooapp.view;
 
 import edu.udea.zooapp.model.WildAnimal;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Vector;
 import javax.swing.table.TableModel;
 
 /**
@@ -24,9 +22,7 @@ public class ListAnimalsPanel extends javax.swing.JPanel {
         
         tableModel = new WildAnimalTableModel(wildAnimals);
         
-        initComponents();
-
-        
+        initComponents();      
     }
 
     /**
@@ -50,14 +46,14 @@ public class ListAnimalsPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE)
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
