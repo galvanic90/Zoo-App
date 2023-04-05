@@ -5,6 +5,7 @@
 package edu.udea.zooapp.controller;
 
 import edu.udea.zooapp.helper.PersistenceHelper;
+import edu.udea.zooapp.model.DomesticAnimal;
 import edu.udea.zooapp.model.WildAnimal;
 import java.util.List;
 
@@ -13,9 +14,10 @@ import java.util.List;
  * @author xaraxx
  */
 public class LogisticController {
-    PersistenceHelper peristence = new PersistenceHelper();
+    PersistenceHelper persistence = new PersistenceHelper();
     
     List<WildAnimal> wildAnimals;
+    List<DomesticAnimal> domesticAnimals;
 
     public LogisticController(List<WildAnimal> wildAnimals) {
         this.wildAnimals = wildAnimals;
@@ -23,12 +25,17 @@ public class LogisticController {
     
     public void createWildAnimal (WildAnimal wildAnimal){
         wildAnimals.add(wildAnimal);  
-        peristence.save(wildAnimal, "wild-animals.json");
+        persistence.save(wildAnimal, "wild-animals.json");
             
     }
     
     public List<WildAnimal> getWildAnimals() {
         return wildAnimals;
+    }
+    
+    public void createDomesticAnimal(DomesticAnimal domesticAnimal){
+        domesticAnimals.add(domesticAnimal);
+        persistence.save(domesticAnimal, "domestic-animals.json");
     }
     
 }
