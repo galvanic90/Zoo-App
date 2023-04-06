@@ -15,7 +15,7 @@ import javax.swing.table.AbstractTableModel;
 public class WildAnimalTableModel extends AbstractTableModel {
 
     private List<WildAnimal> list;
-    private String[] columnNames = {"Name", "Age", "Scientific Name", "Weight", "Gender", "Status", "Pedigree", "Psycology", "Origin", "Protected Specie"};
+    private String[] columnNames = {"Code", "Name", "Age", "Scientific Name", "Weight", "Gender", "Status", "Pedigree", "Psycology", "Origin", "Protected Specie"};
     
 
     public WildAnimalTableModel(List<WildAnimal> list){
@@ -41,25 +41,27 @@ public class WildAnimalTableModel extends AbstractTableModel {
     public Object getValueAt(int rowIndex, int columnIndex) {
         WildAnimal si = list.get(rowIndex);
         switch (columnIndex) {
-            case 0: 
+            case 0:
+                return si.getCode();
+            case 1: 
                 return si.getName();
-            case 1:
-                return si.getAge();
             case 2:
+                return si.getAge();
+            case 3:
                 return si.getScientificName();
-            case 3: 
+            case 4: 
                 return si.getWeight();
-            case 4:
-                return si.getGender();
             case 5:
-                return si.getState();
+                return si.getGender();
             case 6:
-                return si.getPsycology();
+                return si.getState();
             case 7:
-                return si.getPedigree();
+                return si.getPsycology();
             case 8:
-                return si.getOrigin();
+                return si.getPedigree();
             case 9:
+                return si.getOrigin();
+            case 10:
                 return si.getProtectedSpecie();
             }
            return null;
@@ -68,16 +70,16 @@ public class WildAnimalTableModel extends AbstractTableModel {
    @Override
    public Class<?> getColumnClass(int columnIndex){
           switch (columnIndex){
-             case 0:
+            case 0:
+               return Integer.class;  
+            case 1:
                return String.class;
-             case 1:
+            case 2:
                return Float.class;
-             case 2:
+            case 3:
                 return String.class;
-            case 3: 
+            case 4: 
                 return Float.class;
-            case 4:
-                return String.class;
             case 5:
                 return String.class;
             case 6:
@@ -87,6 +89,8 @@ public class WildAnimalTableModel extends AbstractTableModel {
             case 8:
                 return String.class;
             case 9:
+                return String.class;
+            case 10:
                 return Boolean.class;
             }
              return null;

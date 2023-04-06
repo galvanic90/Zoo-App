@@ -6,6 +6,7 @@ package edu.udea.zooapp.view;
 
 import edu.udea.zooapp.controller.LogisticController;
 import edu.udea.zooapp.model.DomesticAnimal;
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,6 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class CreateDomesticAnimal extends javax.swing.JPanel {
     LogisticController logistic;
+    public static Random random;
 
     /**
      * Creates new form CreateDomesticAnimal
@@ -229,6 +231,7 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
 
     private void createDAJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createDAJButtonActionPerformed
         DomesticAnimal domesticAnimal = new DomesticAnimal();
+        domesticAnimal.setCode(random.nextInt((1000 - 0) + 1));
         domesticAnimal.setName(inputNameDA.getText());
         domesticAnimal.setScientificName(inputScientifNameDA.getText());
         domesticAnimal.setWeight(Float.parseFloat(inputWeightDA.getText()));

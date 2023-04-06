@@ -7,13 +7,14 @@ package edu.udea.zooapp.view;
 import edu.udea.zooapp.controller.LogisticController;
 import edu.udea.zooapp.model.WildAnimal;
 import javax.swing.JOptionPane;
+import java.util.Random;
 
 /**
  *
  * @author xaraxx
  */
 public class CreateWildAnimalPanel extends javax.swing.JPanel {
-
+    public static Random random = new Random();
     
     LogisticController logistic;
     /**
@@ -246,6 +247,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         WildAnimal wildAnimal = new WildAnimal();
+        wildAnimal.setCode(random.nextInt((1000 - 0) + 1));
         wildAnimal.setName(inputName.getText());
         wildAnimal.setScientificName(inputScientifName.getText());
         wildAnimal.setWeight(Float.parseFloat(inputWeight.getText()));
@@ -258,6 +260,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
         wildAnimal.setGender(getGender());
         wildAnimal.setProtectedSpecie(protectedSpJCheckBox.isSelected());
         logistic.createWildAnimal(wildAnimal);
+        JOptionPane.showMessageDialog(this, "Animal creado con éxito");
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private void inputScientifNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputScientifNameActionPerformed
