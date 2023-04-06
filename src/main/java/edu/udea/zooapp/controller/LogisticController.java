@@ -4,9 +4,11 @@
  */
 package edu.udea.zooapp.controller;
 
+import com.google.gson.reflect.TypeToken;
 import edu.udea.zooapp.helper.PersistenceHelper;
 import edu.udea.zooapp.model.DomesticAnimal;
 import edu.udea.zooapp.model.WildAnimal;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,13 +21,18 @@ public class LogisticController {
     List<WildAnimal> wildAnimals;
     List<DomesticAnimal> domesticAnimals;
 
+    static final String WILD_ANIMALS_FILE = "wild-animals.json";
+    static final String DOMESTIC_ANIMALS_FILE = "domestic-animals.json";
+
+    
     public LogisticController(List<WildAnimal> wildAnimals) {
         this.wildAnimals = wildAnimals;
     }
     
     public void createWildAnimal (WildAnimal wildAnimal){
+        loadWildAnimals();
         wildAnimals.add(wildAnimal);  
-        persistence.save(wildAnimal, "wild-animals.json");
+        persistence.save(wildAnimals, WILD_ANIMALS_FILE);
             
     }
     
@@ -33,9 +40,13 @@ public class LogisticController {
         return wildAnimals;
     }
     
+    public void loadWildAnimals () {
+        wildAnimals = persistence.load(WILD_ANIMALS_FILE, new TypeToken<ArrayList<WildAnimal>>() {}.getType());
+    }
+    
     public void createDomesticAnimal(DomesticAnimal domesticAnimal){
         domesticAnimals.add(domesticAnimal);
-        persistence.save(domesticAnimal, "domestic-animals.json");
+        persistence.save(domesticAnimal, DOMESTIC_ANIMALS_FILE);
     }
     
 }

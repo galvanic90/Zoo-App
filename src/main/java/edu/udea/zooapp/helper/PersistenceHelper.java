@@ -5,8 +5,10 @@
 package edu.udea.zooapp.helper;
 
 import com.google.gson.Gson;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,8 +29,12 @@ public class PersistenceHelper {
         
     }
 
-    public Object load() {
-        return null;
+    public <T extends Object> T load(String fileName, Type classOfT) {
+        try (FileReader reader = new FileReader(fileName)){
+            return gson.fromJson(reader, classOfT);
+        } catch (IOException ex) {
+            Logger.getLogger(PersistenceHelper.class.getName()).log(Level.SEVERE, null, ex);
+            throw new ZooAppException("Error cargando los datos", ex);
+        }
     }
-    
 }

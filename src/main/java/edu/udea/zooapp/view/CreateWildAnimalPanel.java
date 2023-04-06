@@ -248,6 +248,7 @@ public class CreateWildAnimalPanel extends javax.swing.JPanel {
         WildAnimal wildAnimal = new WildAnimal();
         wildAnimal.setName(inputName.getText());
         wildAnimal.setScientificName(inputScientifName.getText());
+        wildAnimal.setWeight(Float.parseFloat(inputWeight.getText()));
         wildAnimal.setAge(Float.parseFloat(jSpinnerAge.getValue().toString()));
         wildAnimal.setState(stateJComboBox.getSelectedItem().toString());
         wildAnimal.setPedigree(jTextPanePedigree.getText());

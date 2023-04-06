@@ -193,6 +193,7 @@ public class MainJFrameView extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemCreateDAActionPerformed
 
     private void jMenuItemReadWAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReadWAActionPerformed
+        logisticController.loadWildAnimals();
         jScrollPane1.setViewportView(new ListAnimalsPanel(logisticController.getWildAnimals()));
     }//GEN-LAST:event_jMenuItemReadWAActionPerformed
 
