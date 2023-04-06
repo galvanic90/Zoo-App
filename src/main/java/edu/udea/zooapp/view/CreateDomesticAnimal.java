@@ -231,6 +231,7 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
         DomesticAnimal domesticAnimal = new DomesticAnimal();
         domesticAnimal.setName(inputNameDA.getText());
         domesticAnimal.setScientificName(inputScientifNameDA.getText());
+        domesticAnimal.setWeight(Float.parseFloat(inputWeightDA.getText()));
         domesticAnimal.setAge(Float.parseFloat(jSpinnerAgeDA.getValue().toString()));
         domesticAnimal.setState(stateDAJComboBox.getSelectedItem().toString());
         domesticAnimal.setPedigree(jTextPanePedigree.getText());
