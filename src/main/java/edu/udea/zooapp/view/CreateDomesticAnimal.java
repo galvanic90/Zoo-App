@@ -4,18 +4,26 @@
  */
 package edu.udea.zooapp.view;
 
+import edu.udea.zooapp.controller.LogisticController;
+import edu.udea.zooapp.model.DomesticAnimal;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author xaraxx
  */
 public class CreateDomesticAnimal extends javax.swing.JPanel {
+    LogisticController logistic;
 
     /**
      * Creates new form CreateDomesticAnimal
      */
     public CreateDomesticAnimal() {
         initComponents();
+        this.logistic = logistic;
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,6 +57,7 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
+        createDAJButton = new javax.swing.JButton();
 
         stateDAJLabel.setText("Estado ");
 
@@ -88,6 +97,13 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
 
         jScrollPane1.setViewportView(jTextPane1);
 
+        createDAJButton.setText("Crear");
+        createDAJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createDAJButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,12 +111,17 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelPsycologyDA)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextFieldPsycologyDA, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelPsycologyDA)
+                            .addComponent(jLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldPsycologyDA, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(createDAJButton)))
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -133,7 +154,7 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
                                 .addComponent(inputWeightDA)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(maleOptDA)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 221, Short.MAX_VALUE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
                                     .addComponent(femaleOptDA))))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(stateDAJLabel)
@@ -144,7 +165,7 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(300, Short.MAX_VALUE)
+                .addContainerGap(302, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelPsycologyDA)
                     .addComponent(jTextFieldPsycologyDA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -152,7 +173,9 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(createDAJButton)
+                .addGap(12, 12, 12))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(46, 46, 46)
@@ -196,7 +219,7 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabelOrginDA)
                         .addComponent(jTextFieldOriginDA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(112, Short.MAX_VALUE)))
+                    .addContainerGap(114, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -204,8 +227,32 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputScientifNameDAActionPerformed
 
+    private void createDAJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createDAJButtonActionPerformed
+        DomesticAnimal domesticAnimal = new DomesticAnimal();
+        domesticAnimal.setName(inputNameDA.getText());
+        domesticAnimal.setScientificName(inputScientifNameDA.getText());
+        domesticAnimal.setAge(Float.parseFloat(jSpinnerAgeDA.getValue().toString()));
+        domesticAnimal.setState(stateDAJComboBox.getSelectedItem().toString());
+        domesticAnimal.setPedigree(jTextPanePedigree.getText());
+        domesticAnimal.setPsycology(jTextFieldPsycologyDA.getText());
+        domesticAnimal.setOrigin(jTextFieldOriginDA.getText());
+        domesticAnimal.setGender(getGender());
+        logistic.createDomesticAnimal(domesticAnimal);
+    }//GEN-LAST:event_createDAJButtonActionPerformed
+
+private String getGender() {
+        if(maleOptDA.isSelected()) {
+            return "Male";
+        } else if (femaleOptDA.isSelected()) {
+            return "Female";
+        } else {
+            JOptionPane.showMessageDialog(this, "Por favor selecciona un genero");
+            throw new IllegalArgumentException("Gender is not valid, choose one");
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton createDAJButton;
     private javax.swing.JRadioButton femaleOptDA;
     private javax.swing.JTextField inputNameDA;
     private javax.swing.JTextField inputScientifNameDA;
