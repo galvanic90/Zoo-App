@@ -4,8 +4,14 @@
  */
 package edu.udea.zooapp.view;
 
+import edu.udea.zooapp.helper.ZooAppException;
 import edu.udea.zooapp.model.WildAnimal;
+import edu.udea.zooapp.view.actionButtonTable.ActionButton;
+import edu.udea.zooapp.view.actionButtonTable.PanelAction;
+import edu.udea.zooapp.view.actionButtonTable.TableActionCellRender;
+import edu.udea.zooapp.view.actionButtonTable.TableActionDTO;
 import java.util.List;
+import javax.swing.CellRendererPane;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -15,11 +21,11 @@ import javax.swing.table.AbstractTableModel;
 public class WildAnimalTableModel extends AbstractTableModel {
 
     private List<WildAnimal> list;
-    private String[] columnNames = {"Code", "Name", "Age", "Scientific Name", "Weight", "Gender", "Status", "Pedigree", "Psycology", "Origin", "Protected Specie"};
+    private String[] columnNames = {"Code", "Name", "Age", "Scientific Name", "Weight", "Gender", "Status", "Pedigree", "Psycology", "Origin", "Protected Specie", "Options"};
     
 
     public WildAnimalTableModel(List<WildAnimal> list){
-         this.list = list;
+        this.list = list;
     }
 
     @Override
@@ -63,13 +69,15 @@ public class WildAnimalTableModel extends AbstractTableModel {
                 return si.getOrigin();
             case 10:
                 return si.getProtectedSpecie();
-            }
-           return null;
+            case 11:
+                return new TableActionDTO();
+        }
+        return null;
    }
 
    @Override
    public Class<?> getColumnClass(int columnIndex){
-          switch (columnIndex){
+        switch (columnIndex){
             case 0:
                return Integer.class;  
             case 1:
@@ -92,7 +100,9 @@ public class WildAnimalTableModel extends AbstractTableModel {
                 return String.class;
             case 10:
                 return Boolean.class;
-            }
-             return null;
-      }
- }
+            case 11:
+                return TableActionDTO.class;    
+        }
+        throw new ZooAppException("Intentando acceder a un elemento de la tabla inexistente");
+    }
+}

@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class CreateDomesticAnimal extends javax.swing.JPanel {
     LogisticController logistic;
-    public static Random random;
+    public static Random random = new Random();
 
     /**
      * Creates new form CreateDomesticAnimal
@@ -242,6 +242,7 @@ public class CreateDomesticAnimal extends javax.swing.JPanel {
         domesticAnimal.setOrigin(jTextFieldOriginDA.getText());
         domesticAnimal.setGender(getGender());
         logistic.createDomesticAnimal(domesticAnimal);
+        JOptionPane.showMessageDialog(this, "Animal creado con éxito");
     }//GEN-LAST:event_createDAJButtonActionPerformed
 
 private String getGender() {
